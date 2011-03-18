@@ -6,30 +6,19 @@
 --------------------Configuration: Sls - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1E4.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\3libs\ut\include" /I "..\3libs\gdiplus\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/Sls.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"E:\五方\sls\Sls\StringUtil.cpp"
-"E:\五方\sls\Sls\WiFiEnginner.cpp"
-]
-Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1E4.tmp" 
-Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1E5.tmp" with contents
+Creating command line "rc.exe /l 0x804 /fo"Debug/Sls.res" /d "_DEBUG" /d "_AFXDLL" "E:\外接项目\五方\sls\Sls\Sls.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP7DB4.tmp" with contents
 [
 UTD.lib gdiplus.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Sls.pdb" /debug /machine:I386 /out:"Debug/Sls.exe" /pdbtype:sept /libpath:"..\3libs\ut\lib" /libpath:"..\3libs\gdiplus\lib" 
 ".\Debug\Sls.obj"
 ".\Debug\SlsDlg.obj"
 ".\Debug\StdAfx.obj"
-".\Debug\StringUtil.obj"
 ".\Debug\util.obj"
-".\Debug\WiFiEnginner.obj"
 ".\Debug\Sls.res"
 ]
-Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1E5.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP7DB4.tmp"
 <h3>Output Window</h3>
-Compiling...
-StringUtil.cpp
-WiFiEnginner.cpp
-Generating Code...
+Compiling resources...
 Linking...
 
 

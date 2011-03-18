@@ -12,7 +12,8 @@
 // CSlsDlg dialog
 #include <OXBackgroundPainter.h>
 #include <OXDIB.h>
-#include <OXListBoxEx.h>
+#include "OXBitmapButton.h"
+
 class CSlsDlg : public CDialog
 {
 // Construction
@@ -22,7 +23,12 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CSlsDlg)
 	enum { IDD = IDD_SLS_DIALOG };
-		// NOTE: the ClassWizard will add data members here
+	COXBitmapButton	m_WifiBtn;
+	COXBitmapButton	m_VideoBtn;
+	COXBitmapButton	m_PlayBtn;
+	COXBitmapButton	m_PictureBtn;
+	COXBitmapButton	m_PhotoBtn;
+	COXBitmapButton	m_CloseBtn;
 	//}}AFX_DATA
 
 	// ClassWizard generated virtual function overrides
@@ -44,8 +50,10 @@ protected:
 	DECLARE_MESSAGE_MAP()
 private:
 	COXBackgroundPainterOrganizer m_backPainterOrganizer;
+	COXBackgroundPainterOrganizer m_RightbackPainterOrganizer;
 	COXDIB *m_backgroup;
-};s
+	COXDIB *m_rightbackgroup;
+};
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
