@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <afxdllx.h>
 #include <GdiPlus.h>
-#include "uitl.h"
+#include "util.h"
 
 HBITMAP GXLoadFile(LPCTSTR lpszBitmapName)
 {

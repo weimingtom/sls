@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "Sls.h"
 #include "SlsDlg.h"
-#include "uitl.h"
+#include "util.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -19,7 +19,6 @@ CSlsDlg::CSlsDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CSlsDlg::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CSlsDlg)
-		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 	// Note that LoadIcon does not require a subsequent DestroyIcon in Win32
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
@@ -29,7 +28,12 @@ void CSlsDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CSlsDlg)
-		// NOTE: the ClassWizard will add DDX and DDV calls here
+	DDX_Control(pDX, IDC_BUTTON_WIFI, m_WifiBtn);
+	DDX_Control(pDX, IDC_BUTTON_VIDEO, m_VideoBtn);
+	DDX_Control(pDX, IDC_BUTTON_PLAY, m_PlayBtn);
+	DDX_Control(pDX, IDC_BUTTON_PICTURE, m_PictureBtn);
+	DDX_Control(pDX, IDC_BUTTON_PHOTO, m_PhotoBtn);
+	DDX_Control(pDX, IDC_BUTTON_CLOSE, m_CloseBtn);
 	//}}AFX_DATA_MAP
 }
 
@@ -59,6 +63,13 @@ BOOL CSlsDlg::OnInitDialog()
 	hBitmap=GXLoadFile("c:\\background.png");
 	HDIB hImg=m_backgroup->BitmapToDIB(hBitmap);
 	m_backPainterOrganizer.Attach(this,m_backgroup);
+
+	m_rightbackgroup = new COXDIB;
+	HBITMAP hBitmap2;
+	hBitmap2=GXLoadFile("c:\\background.png");
+	//HDIB hImg2= m_rightbackgroup->BitmapToDIB(hBitmap2);
+	//m_RightbackPainterOrganizer.Attach(&m_WifiBtn,m_rightbackgroup);
+	m_WifiBtn.SetBitmap(hBitmap2);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
