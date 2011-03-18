@@ -70,6 +70,8 @@ BOOL CSlsDlg::OnInitDialog()
 	//HDIB hImg2= m_rightbackgroup->BitmapToDIB(hBitmap2);
 	//m_RightbackPainterOrganizer.Attach(&m_WifiBtn,m_rightbackgroup);
 	m_WifiBtn.SetBitmap(hBitmap2);
+
+	InitButtonRect();
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -107,4 +109,30 @@ void CSlsDlg::OnPaint()
 HCURSOR CSlsDlg::OnQueryDragIcon()
 {
 	return (HCURSOR) m_hIcon;
+}
+
+void CSlsDlg::InitButtonRect()
+{
+	m_WifiBtn.SizeToContent();
+	m_VideoBtn.SizeToContent();
+	m_PlayBtn.SizeToContent();
+	m_PictureBtn.SizeToContent();
+	m_PhotoBtn.SizeToContent();
+	m_CloseBtn.SizeToContent();
+
+	CRect rect;
+	CSize size;
+	int width;
+	int height;
+	int x = 0;
+	int y = 0;
+	
+	this->GetWindowRect(rect);
+
+	width = rect.Width();
+	rect.SetRect(width - 120,y,100,100);
+	m_CloseBtn.MoveWindow(rect);
+
+	rect.SetRect(width - 120,y + 120,100,100);
+	m_VideoBtn.MoveWindow(rect);
 }

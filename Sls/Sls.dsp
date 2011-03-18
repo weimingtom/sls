@@ -108,7 +108,15 @@ SOURCE=.\StdAfx.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\StringUtil.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\util.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\WiFiEnginner.cpp
 # End Source File
 # End Group
 # Begin Group "Header Files"
@@ -132,7 +140,15 @@ SOURCE=.\StdAfx.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\StringUtil.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\util.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\WiFiEnginner.h
 # End Source File
 # End Group
 # Begin Group "Resource Files"

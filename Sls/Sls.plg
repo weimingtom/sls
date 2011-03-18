@@ -6,20 +6,6 @@
 --------------------Configuration: Sls - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "rc.exe /l 0x804 /fo"Debug/Sls.res" /d "_DEBUG" /d "_AFXDLL" "E:\外接项目\五方\sls\Sls\Sls.rc"" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP7DB4.tmp" with contents
-[
-UTD.lib gdiplus.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Sls.pdb" /debug /machine:I386 /out:"Debug/Sls.exe" /pdbtype:sept /libpath:"..\3libs\ut\lib" /libpath:"..\3libs\gdiplus\lib" 
-".\Debug\Sls.obj"
-".\Debug\SlsDlg.obj"
-".\Debug\StdAfx.obj"
-".\Debug\util.obj"
-".\Debug\Sls.res"
-]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP7DB4.tmp"
-<h3>Output Window</h3>
-Compiling resources...
-Linking...
 
 
 

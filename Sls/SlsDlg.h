@@ -41,6 +41,7 @@ public:
 protected:
 	HICON m_hIcon;
 
+	void InitButtonRect();
 	// Generated message map functions
 	//{{AFX_MSG(CSlsDlg)
 	virtual BOOL OnInitDialog();
