@@ -60,17 +60,16 @@ BOOL CSlsDlg::OnInitDialog()
 
 	m_backgroup = new COXDIB;
 	HBITMAP hBitmap;
-	hBitmap=GXLoadFile("c:\\background.png");
+	hBitmap=GetImageHandle(CString("background.png"));
 	HDIB hImg=m_backgroup->BitmapToDIB(hBitmap);
 	m_backPainterOrganizer.Attach(this,m_backgroup);
-
 	m_rightbackgroup = new COXDIB;
 	HBITMAP hBitmap2;
-	hBitmap2=GXLoadFile("c:\\background.png");
+	hBitmap2=GetImageHandle(CString("background.png"));
 	//HDIB hImg2= m_rightbackgroup->BitmapToDIB(hBitmap2);
 	//m_RightbackPainterOrganizer.Attach(&m_WifiBtn,m_rightbackgroup);
 	m_WifiBtn.SetBitmap(hBitmap2);
-
+		
 	InitButtonRect();
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }

@@ -3,6 +3,7 @@
 #include <GdiPlus.h>
 #include "util.h"
 
+static CString g_appPath;
 HBITMAP GXLoadFile(LPCTSTR lpszBitmapName)
 {
 	WCHAR szBuff[MAX_PATH];
@@ -52,4 +53,32 @@ HBITMAP GXLoadFile(LPCTSTR lpszBitmapName)
 	ASSERT(nBuf >= 0);
 	OutputDebugStringW(szBuffer);
 	va_end(args);
+}
+
+ CString &GetAppPath()
+ {
+	if(g_appPath.IsEmpty())
+	{
+		CString strFullName = AfxGetApp()->m_pszHelpFilePath;
+		char drive[_MAX_DRIVE];
+		char dir[_MAX_DIR];
+		
+		_splitpath(strFullName, drive, dir, NULL,NULL);
+		g_appPath.Format("%s%s", drive, dir);
+		
+	}
+	return g_appPath;
+ }
+
+ CString &GetImagePath()
+ {
+	CString &appPath=GetAppPath();
+	appPath+="Pics\\";
+	return appPath;
+ }
+HBITMAP GetImageHandle(CString &img)
+{
+	CString &appPath=GetImagePath();
+	appPath+=img;
+	return GXLoadFile(appPath);
 }

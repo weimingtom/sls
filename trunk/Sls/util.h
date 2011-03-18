@@ -7,5 +7,7 @@ void printLog(LPCSTR lpszFormat, ...);
 void printLog(LPCWSTR lpszFormat, ...);
 #define printlog printLog
 HBITMAP GXLoadFile(LPCTSTR lpszBitmapName);
-
+CString &GetAppPath();
+CString &GetImagePath();
+HBITMAP GetImageHandle(CString &img);
 #endif
