@@ -76,6 +76,7 @@ public:
 	void SetPlayPath(CString aPath);
 	void Play();
 	void Stop();
+	void CreatePlayer();
 
 };
 #endif
