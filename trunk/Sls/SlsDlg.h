@@ -23,6 +23,7 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CSlsDlg)
 	enum { IDD = IDD_SLS_DIALOG };
+	CStatic	m_RightPanel;
 	COXBitmapButton	m_WifiBtn;
 	COXBitmapButton	m_VideoBtn;
 	COXBitmapButton	m_PlayBtn;
@@ -41,7 +42,8 @@ public:
 protected:
 	HICON m_hIcon;
 
-	void InitButtonRect();
+	void InitPage();
+	void InitButtonRect(int bitmapWidth, int bitmapHeight);
 	// Generated message map functions
 	//{{AFX_MSG(CSlsDlg)
 	virtual BOOL OnInitDialog();
