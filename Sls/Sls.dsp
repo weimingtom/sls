@@ -68,7 +68,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Yu"stdafx.h" /FD /GZ /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\3libs\ut\include" /I "..\3libs\gdiplus\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "BCMENU_NODLL" /FR /Yu"stdafx.h" /FD /GZ /c
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\3libs\ut\include" /I "..\3libs\gdiplus\include" /I "..\3libs\vlc\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "BCMENU_NODLL" /FR /Yu"stdafx.h" /FD /GZ /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0x804 /d "_DEBUG" /d "_AFXDLL"
@@ -78,7 +78,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 UTD.lib gdiplus.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept /libpath:"..\3libs\ut\lib" /libpath:"..\3libs\gdiplus\lib"
+# ADD LINK32 UTD.lib gdiplus.lib libvlc.lib libvlccore.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept /libpath:"..\3libs\ut\lib" /libpath:"..\3libs\gdiplus\lib" /libpath:"..\3libs\vlc\lib"
 
 !ENDIF 
 
@@ -124,6 +124,10 @@ SOURCE=.\util.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\VlcWnd.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\WiFiEnginner.cpp
 # End Source File
 # End Group
@@ -161,6 +165,10 @@ SOURCE=.\StringUtil.h
 # Begin Source File
 
 SOURCE=.\util.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\VlcWnd.h
 # End Source File
 # Begin Source File
 

@@ -16,7 +16,8 @@
 #define IDC_BUTTON_WIFI                 1013
 #define IDC_BUTTON_PHOTO                1015
 #define IDC_STATIC_RIGHT                1016
-
+#define IDD_CHILD                       149
+#define IDD_POPUP                       150
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
