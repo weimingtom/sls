@@ -147,6 +147,7 @@ void CSlsDlg::InitButtonRect(int bitmapWidth, int bitmapHeight)
 	totalHeight = rect.Height();
 	height = bitmapHeight + 18;
 
+
 	x = width - bitmapWidth - 8;
 	rect.SetRect(x, y, width - 4, y + bitmapHeight);
 	m_CloseBtn.MoveWindow(rect);
