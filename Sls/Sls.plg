@@ -6,6 +6,31 @@
 --------------------Configuration: Sls - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP8027.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\3libs\ut\include" /I "..\3libs\gdiplus\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/Sls.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\外接项目\sls\Sls\SlsDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP8027.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP8028.tmp" with contents
+[
+UTD.lib gdiplus.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Sls.pdb" /debug /machine:I386 /out:"Debug/Sls.exe" /pdbtype:sept /libpath:"..\3libs\ut\lib" /libpath:"..\3libs\gdiplus\lib" 
+".\Debug\Sls.obj"
+".\Debug\SlsDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\util.obj"
+".\Debug\Sls.res"
+".\Debug\StringUtil.obj"
+".\Debug\WiFiEnginner.obj"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP8028.tmp"
+<h3>Output Window</h3>
+Compiling...
+SlsDlg.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/Sls.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\Sls.sbr" ".\Debug\SlsDlg.sbr" ".\Debug\util.sbr" ".\Debug\StringUtil.sbr" ".\Debug\WiFiEnginner.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
 
 
 

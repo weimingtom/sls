@@ -55,7 +55,7 @@ HBITMAP GXLoadFile(LPCTSTR lpszBitmapName)
 	va_end(args);
 }
 
- CString &GetAppPath()
+ CString GetAppPath()
  {
 	if(g_appPath.IsEmpty())
 	{
@@ -70,15 +70,15 @@ HBITMAP GXLoadFile(LPCTSTR lpszBitmapName)
 	return g_appPath;
  }
 
- CString &GetImagePath()
+ CString GetImagePath()
  {
-	CString &appPath=GetAppPath();
+	CString appPath=GetAppPath();
 	appPath+="Pics\\";
 	return appPath;
  }
 HBITMAP GetImageHandle(CString &img)
 {
-	CString &appPath=GetImagePath();
+	CString appPath=GetImagePath();
 	appPath+=img;
 	return GXLoadFile(appPath);
 }
