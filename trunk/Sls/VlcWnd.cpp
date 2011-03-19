@@ -9,6 +9,11 @@
 #define AC_SRC_ALPHA            0x01
 CVlcWnd::CVlcWnd()
 {
+
+}
+
+void CVlcWnd::CreatePlayer()
+{
 	m_hVlcWnd = CreateDialogParam(::AfxGetApp()->m_hInstance, MAKEINTRESOURCE(IDD_CHILD), iParentWnd->GetSafeHwnd(), VlcWndProc, (LPARAM)this);
 	if(!iPlayPath.IsEmpty())
 	{
@@ -25,7 +30,6 @@ CVlcWnd::CVlcWnd()
 		libvlc_video_set_scale(m_pVlcMediaPlayer, m_fZoom);
 	}
 }
-
 CVlcWnd::~CVlcWnd()
 {
 	
